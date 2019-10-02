@@ -10,8 +10,8 @@ tab_1_layout = html.Div([
             html.H6('Select one:'),
             dcc.Dropdown(
                 id='page-1-dropdown',
-                options=[{'label': i, 'value': i} for i in ['burger', 'fries', 'milkshake']],
-                value='burger',
+                options=[{'label': i, 'value': i} for i in ['sushi', 'ramen', 'army pots']],
+                value='sushi',
                 style = dict(
                             width = '70%',
                             display = 'inline-block',
