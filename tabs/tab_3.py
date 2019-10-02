@@ -12,9 +12,9 @@ tab_3_layout = html.Div([
                 id='page-3-slider',
                 min=1,
                 max=8,
-                step=0.1,
-                marks={i:str(i) for i in range(1, 9)},
-                value=5,
+                step=0.5,
+                marks={i:str(i) for i in range(1, 5)},
+                value=2.5,
             ),
         ], className='four columns'),
         html.Div([
