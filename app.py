@@ -26,12 +26,24 @@ app.config['suppress_callback_exceptions'] = True
 
 app.layout = html.Div([
     html.H1(myheading1),
-    dcc.Tabs(id="tabs-example", value='tab-1-example', children=[
-        dcc.Tab(label='Tab One', value='tab-1-example'),
-        dcc.Tab(label='Tab Two', value='tab-2-example'),
-        dcc.Tab(label='Tab Three', value='tab-3-example'),
+    dcc.Tabs(id="tabs-example", value='tab-1-example',
+            children=[
+                dcc.Tab(label='Tab One', value='tab-1-example'),
+                dcc.Tab(label='Tab Two', value='tab-2-example'),
+                dcc.Tab(label='Tab Three', value='tab-3-example'),
     ]),
-    html.Div(id='tabs-content-example')
+    html.Div([
+        html.Div(id='tabs-content-example'),
+    ], className='twelve columns',
+        style={'marginBottom': 50, 'marginTop': 25}),
+    html.Div([
+        html.A('Code on Github', href=githublink),
+        html.Br(),
+        html.A("Data Source", href=sourceurl),
+    ], className='twelve columns',
+        style={'textAlign':'right',
+                'fontColor':'#FFFFFF',
+                'backgroundColor':'#D3D3D3',})
 ])
 
 @app.callback(Output('tabs-content-example', 'children'),
